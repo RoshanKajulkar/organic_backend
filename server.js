@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+ 
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
@@ -11,6 +11,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
+const stripeRoutes = require("./routes/stripepayment");
 
 //DB Connection 
 mongoose
@@ -32,6 +33,7 @@ app.use(cors());
 app.use("/auth", authRoutes);
 app.use("/user",userRoutes);
 app.use("/product",productRoutes);
+app.use("/api", stripeRoutes);
 
 //PORT
 const port = process.env.PORT || 8000;

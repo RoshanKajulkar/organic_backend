@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "lodash": "^4.17.20",
     "mongoose": "^5.10.9",
     "nodemon": "^2.0.4",
+    "stripe": "^8.109.0",
     "uuid": "^8.3.1"
   }
 }
